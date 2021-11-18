@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const baseUrl = "https://api-pub.bitfinex.com/v2/";
+const baseUrl = process.env.EXTERNAL_EXCHANGE_URL
 const queryParams = "len=100"
 
 const requestBook = async (symbol) => {
