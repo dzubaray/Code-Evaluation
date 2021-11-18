@@ -1,8 +1,10 @@
 const express = require('express')
+const { requestBook } = require('../services/book')
 
-const getBooks = async (req, res) => {
+const getBooks = async (req, res = express.response) => {
+    const response = requestBook()
     res.json({
-        ok: true
+        ok: response
     })
 }
 
