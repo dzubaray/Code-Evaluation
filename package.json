@@ -1,0 +1,14 @@
+{
+  "name": "code-evaluation",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "code evaluation",
+  "main": "src/index.js",
+  "scripts": {
+    "run": "node src/index.js"
+  },
+  "author": "dario zubaray",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
