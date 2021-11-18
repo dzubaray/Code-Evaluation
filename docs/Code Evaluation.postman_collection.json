@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "5cf02793-07a6-4b97-8878-d4dfa25be5ab",
+		"name": "Code Evaluation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET: OrderBook - tBTCUSD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/v1/api/book/tBTCUSD",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"book",
+						"tBTCUSD"
+					]
+				},
+				"description": "Getting the orderbooks for tBTCUSD"
+			},
+			"response": []
+		},
+		{
+			"name": "GET: OrderBook - tETHUSD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/v1/api/book/tETHUSD",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"book",
+						"tETHUSD"
+					]
+				},
+				"description": "Getting the orderbook for tETHUSD"
+			},
+			"response": []
+		}
+	]
+}
