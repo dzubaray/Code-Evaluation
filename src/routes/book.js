@@ -3,6 +3,6 @@ const { getBooks } = require('../controllers/book')
 
 const router = Router()
 
-router.get('/book', getBooks)
+router.get('/book/:symbol', getBooks)
 
 module.exports = router

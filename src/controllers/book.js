@@ -2,7 +2,8 @@ const express = require('express')
 const { requestBook } = require('../services/book')
 
 const getBooks = async (req, res = express.response) => {
-    const response = await requestBook()
+    const symbol = req.params.symbol
+    const response = await requestBook(symbol)
     res.json({
         ok: response
     })
