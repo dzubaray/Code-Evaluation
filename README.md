@@ -5,8 +5,7 @@ The goal of this project is to create a public API REST that retrieves the marke
 ### Problem Specification
 
 - The API should expose only two endpoints:
-  - An endpoint that is called with a pair name, and retrieves the tips of the
-orderbook (considering both amount and price for bid and ask).
+  - An endpoint that is called with a pair name, and retrieves the tips of the orderbook (considering both amount and price for bid and ask).
   - An endpoint that is called with the pair name, the operation type and the order size, and returns the price to execute the order considering its size (i.e., evaluate [Market Depth]([https://www.investopedia.com/terms/m/marketdepth.asp])).
 - The backend should consume data from an external exchange. You could use whatever source you prefer, check orderbook websocket stream from [Bittrex API](https://bittrex.github.io/api/v3) doc or [Bitfinex API](https://docs.bitfinex.com/reference#ws-public-books) doc as references.
 - Support only the following trading pairs:
