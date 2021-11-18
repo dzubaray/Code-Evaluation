@@ -1,11 +1,10 @@
 const { Router } = require('express')
+const {
+    getBooks
+  } = require('../controllers/book')
 
 const router = Router()
 
-router.get('/book', async (req, res) => {
-    res.json({
-        ok: true
-    })
-})
+router.get('/book', getBooks)
 
 module.exports = router
