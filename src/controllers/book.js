@@ -3,10 +3,19 @@ const { requestBook } = require('../services/book')
 
 const getBooks = async (req, res = express.response) => {
     const symbol = req.params.symbol
-    const response = await requestBook(symbol)
-    res.json({
-        ok: response
-    })
+    try {
+        const data = await requestBook(symbol)
+        res.json({
+            ok: true,
+            data
+        })
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({
+            ok: false,
+            error
+        })
+    }
 }
 
 module.exports = {
