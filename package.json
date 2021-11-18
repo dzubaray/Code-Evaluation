@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "run": "node src/index.js",
-    "debug": "nodemon src/index.js"
+    "debug": "nodemon src/index.js",
+    "test": "mocha 'src/test/**/*.js' --recursive -t 120000 -c --exit"
   },
   "author": "dario zubaray",
   "license": "ISC",
@@ -16,6 +17,9 @@
     "express-validator": "^6.13.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   }
 }
