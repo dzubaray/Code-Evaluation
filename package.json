@@ -4,7 +4,8 @@
   "description": "code evaluation",
   "main": "src/index.js",
   "scripts": {
-    "run": "node src/index.js"
+    "run": "node src/index.js",
+    "debug": "nodemon src/index.js"
   },
   "author": "dario zubaray",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

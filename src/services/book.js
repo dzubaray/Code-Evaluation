@@ -8,7 +8,6 @@ const requestBook = async (symbol) => {
     const pathParams = `book/${symbol}/P0`
 
     const { data } = await axios.get(`${baseUrl}/${pathParams}?${queryParams}`)
-    //console.log(data)
     return data.map(book => new Book(book[0], book[1], book[2]))
 
 }
