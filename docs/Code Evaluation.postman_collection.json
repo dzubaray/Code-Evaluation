@@ -6,12 +6,12 @@
 	},
 	"item": [
 		{
-			"name": "GET: OrderBook - tBTCUSD",
+			"name": "GET: OrderBook - BTC-USD",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/v1/api/book/tBTCUSD",
+					"raw": "localhost:8000/v1/api/book/BTC-USD",
 					"host": [
 						"localhost"
 					],
@@ -20,7 +20,7 @@
 						"v1",
 						"api",
 						"book",
-						"tBTCUSD"
+						"BTC-USD"
 					]
 				},
 				"description": "Getting the orderbooks for tBTCUSD"
@@ -28,12 +28,12 @@
 			"response": []
 		},
 		{
-			"name": "GET: OrderBook - tETHUSD",
+			"name": "GET: OrderBook - ETH-USD",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/v1/api/book/tETHUSD",
+					"raw": "localhost:8000/v1/api/book/ETH-USD",
 					"host": [
 						"localhost"
 					],
@@ -42,7 +42,7 @@
 						"v1",
 						"api",
 						"book",
-						"tETHUSD"
+						"ETH-USD"
 					]
 				},
 				"description": "Getting the orderbook for tETHUSD"

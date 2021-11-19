@@ -8,7 +8,7 @@ const app = require('../../../src/index.js')
 describe('Orderbook api', () => {
     it('should get the tips of the orderbook', (done) => {
       request(app)
-        .get('/v1/api/book/tBTCUSD')
+        .get('/v1/api/book/BTC-USD')
         .expect(200)
         .then((res) => {
           const body = res.body
@@ -46,7 +46,7 @@ describe('Orderbook api', () => {
 
             expect(body.errors.symbol).to.contain.property('msg')
             expect(body.errors.symbol.msg).to.be.an('string')
-            expect(body.errors.symbol.msg).to.equal('The trading pair must be either \'tBTCUSD\' or \'tETHUSD\'')
+            expect(body.errors.symbol.msg).to.equal('The trading pair must be either \'BTC-USD\' or \'ETH-USD\'')
 
             expect(body.errors.symbol).to.contain.property('param')
             expect(body.errors.symbol.param).to.be.an('string')

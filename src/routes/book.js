@@ -5,15 +5,15 @@ const { getBooks } = require('../controllers/book')
 
 const router = Router()
 
-router.get('/book/:symbol',
+router.get('/book/:tradingPair',
             [
-                param('symbol')
+                param('tradingPair')
                     .exists()
                     .withMessage('The trading pair is Requiered')
                     .isString()
                     .withMessage('The trading pair must be a String')
-                    .isIn(['tBTCUSD', 'tETHUSD'])
-                    .withMessage('The trading pair must be either \'tBTCUSD\' or \'tETHUSD\''),
+                    .isIn(['BTC-USD', 'ETH-USD'])
+                    .withMessage('The trading pair must be either \'BTC-USD\' or \'ETH-USD\''),
                 validateFields
             ],
             getBooks)
