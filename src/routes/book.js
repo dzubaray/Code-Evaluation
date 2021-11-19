@@ -5,7 +5,7 @@ const { getBooks } = require('../controllers/book')
 
 const router = Router()
 
-router.get('/book/:tradingPair',
+router.get('/:tradingPair',
             [
                 param('tradingPair')
                     .exists()
