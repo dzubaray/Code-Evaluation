@@ -1,5 +1,5 @@
 const express = require('express')
-const { requestBook } = require('../services/book')
+const { requestBook } = require('../services/bitfinex.service')
 
 const tradingPair = {
     'BTC-USD': () => 'tBTCUSD',
