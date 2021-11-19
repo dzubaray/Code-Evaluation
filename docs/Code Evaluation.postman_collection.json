@@ -11,11 +11,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/v1/api/book/BTC-USD",
+					"raw": "{{code-evaluation-server}}/v1/api/book/BTC-USD",
 					"host": [
-						"localhost"
+						"{{code-evaluation-server}}"
 					],
-					"port": "8000",
 					"path": [
 						"v1",
 						"api",
@@ -33,11 +32,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/v1/api/book/ETH-USD",
+					"raw": "{{code-evaluation-server}}/v1/api/book/ETH-USD",
 					"host": [
-						"localhost"
+						"{{code-evaluation-server}}"
 					],
-					"port": "8000",
 					"path": [
 						"v1",
 						"api",
@@ -46,6 +44,92 @@
 					]
 				},
 				"description": "Getting the orderbook for tETHUSD"
+			},
+			"response": []
+		},
+		{
+			"name": "GET: OrderBook - Invalid Trading Pair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{code-evaluation-server}}/v1/api/book/invalid-trading-pair",
+					"host": [
+						"{{code-evaluation-server}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"book",
+						"invalid-trading-pair"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Tricker- ETH-USD - trading - high",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{code-evaluation-server}}/v1/api/tricker/ETH-USD/trading/high",
+					"host": [
+						"{{code-evaluation-server}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"tricker",
+						"ETH-USD",
+						"trading",
+						"high"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Tricker- BTC-USD - funding - low",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{code-evaluation-server}}/v1/api/tricker/BTC-USD/funding/low",
+					"host": [
+						"{{code-evaluation-server}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"tricker",
+						"BTC-USD",
+						"funding",
+						"low"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Tricker- Invalid Trading Pair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{code-evaluation-server}}/v1/api/tricker/invalid-trading-pair/funding/low",
+					"host": [
+						"{{code-evaluation-server}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"tricker",
+						"invalid-trading-pair",
+						"funding",
+						"low"
+					]
+				}
 			},
 			"response": []
 		}
