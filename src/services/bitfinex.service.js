@@ -12,7 +12,7 @@ const requestBook = async (symbol) => {
     return data.map(book => new Book(book[0], book[1], book[2]))
 }
 
-const requestTricker = async(symbol) => {
+const requestTricker = async (symbol) => {
     const pathParams = `ticker/${symbol}`
 
     const { data } = await axios.get(`${baseUrl}/${pathParams}`)

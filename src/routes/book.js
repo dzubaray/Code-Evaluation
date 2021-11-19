@@ -6,16 +6,16 @@ const { getBooks } = require('../controllers/book')
 const router = Router()
 
 router.get('/:tradingPair',
-            [
-                param('tradingPair')
-                    .exists()
-                    .withMessage('The trading pair is Requiered')
-                    .isString()
-                    .withMessage('The trading pair must be a String')
-                    .isIn(['BTC-USD', 'ETH-USD'])
-                    .withMessage('The trading pair must be either \'BTC-USD\' or \'ETH-USD\''),
-                validateFields
-            ],
-            getBooks)
+    [
+        param('tradingPair')
+            .exists()
+            .withMessage('The trading pair is Requiered')
+            .isString()
+            .withMessage('The trading pair must be a String')
+            .isIn(['BTC-USD', 'ETH-USD'])
+            .withMessage('The trading pair must be either \'BTC-USD\' or \'ETH-USD\''),
+        validateFields
+    ],
+    getBooks)
 
 module.exports = router

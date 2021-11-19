@@ -1,4 +1,4 @@
-function Tricker (bid,
+function Tricker(bid,
     bidSize,
     ask,
     askSize,

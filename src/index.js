@@ -8,7 +8,7 @@ app.use('/v1/api/book', require('./routes/book'))
 app.use('/v1/api/tricker', require('./routes/tricker'))
 
 app.listen(port, () => {
-  console.log(`Example app listening at port: ${port}`)
+    console.log(`Example app listening at port: ${port}`)
 })
 
 module.exports = app
