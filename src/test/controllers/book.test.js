@@ -33,28 +33,28 @@ describe('Orderbook api', () => {
   
             expect(body).to.contain.property('ok')
             expect(body.ok).to.equal(false)
-  
+
             expect(body).to.contain.property('errors')
             expect(body.errors).to.be.an('object')
 
-            expect(body.errors).to.contain.property('symbol')
-            expect(body.errors.symbol).to.be.an('object')
+            expect(body.errors).to.contain.property('tradingPair')
+            expect(body.errors.tradingPair).to.be.an('object')
 
-            expect(body.errors.symbol).to.contain.property('value')
-            expect(body.errors.symbol.value).to.be.an('string')
-            expect(body.errors.symbol.value).to.equal(param)
+            expect(body.errors.tradingPair).to.contain.property('value')
+            expect(body.errors.tradingPair.value).to.be.an('string')
+            expect(body.errors.tradingPair.value).to.equal(param)
 
-            expect(body.errors.symbol).to.contain.property('msg')
-            expect(body.errors.symbol.msg).to.be.an('string')
-            expect(body.errors.symbol.msg).to.equal('The trading pair must be either \'BTC-USD\' or \'ETH-USD\'')
+            expect(body.errors.tradingPair).to.contain.property('msg')
+            expect(body.errors.tradingPair.msg).to.be.an('string')
+            expect(body.errors.tradingPair.msg).to.equal('The trading pair must be either \'BTC-USD\' or \'ETH-USD\'')
 
-            expect(body.errors.symbol).to.contain.property('param')
-            expect(body.errors.symbol.param).to.be.an('string')
-            expect(body.errors.symbol.param).to.equal('symbol')
+            expect(body.errors.tradingPair).to.contain.property('param')
+            expect(body.errors.tradingPair.param).to.be.an('string')
+            expect(body.errors.tradingPair.param).to.equal('tradingPair')
 
-            expect(body.errors.symbol).to.contain.property('location')
-            expect(body.errors.symbol.location).to.be.an('string')
-            expect(body.errors.symbol.location).to.equal('params')
+            expect(body.errors.tradingPair).to.contain.property('location')
+            expect(body.errors.tradingPair.location).to.be.an('string')
+            expect(body.errors.tradingPair.location).to.equal('params')
 
             done()
           })

@@ -9,7 +9,7 @@ const tradingPair = {
 const getBooks = async (req, res = express.response) => {
     const symbol = tradingPair[req.params.tradingPair]
     try {
-        const data = await requestBook(symbol)
+        const data = await requestBook(symbol())
         res.json({
             ok: true,
             data
